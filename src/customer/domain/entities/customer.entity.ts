@@ -26,15 +26,15 @@ export interface CustomerProps {
   distrChan: number;
   division: number;
   fiscalCode: number;
-  alternate_fiscalCode: number;
+  alternateFiscalCode: number;
   frequency: boolean;
   frequencyDays: string;
   idPortfolio: string;
   immediateDelivery: boolean;
   industryCode: string;
-  alternate_industryCode: string;
+  alternateIndustryCode: string;
   isEnrollment: boolean;
-  alternate_name: string;
+  alternateName: string;
   office: string;
   paymentCondition: string;
   paymentMethods: {
@@ -215,15 +215,15 @@ export class CustomerEntity {
     this._distrChan.validate(props.distrChan);
     this._division.validate(props.division);
     this._fiscalCode.validate(props.fiscalCode);
-    this._alternate_fiscalCode.validate(props.alternate_fiscalCode);
+    this._alternate_fiscalCode.validate(props.alternateFiscalCode);
     this._frequency.validate(props.frequency);
     this._frequencyDays.validate(props.frequencyDays);
     this._idPortfolio.validate(props.idPortfolio);
     this._immediateDelivery.validate(props.immediateDelivery);
     this._industryCode.validate(props.industryCode);
-    this._alternate_industryCode.validate(props.alternate_industryCode);
+    this._alternate_industryCode.validate(props.alternateIndustryCode);
     this._isEnrollment.validate(props.isEnrollment);
-    this._alternate_name.validate(props.alternate_name);
+    this._alternate_name.validate(props.alternateName);
     this._office.validate(props.office);
     this._paymentCondition.validate(props.paymentCondition);
     this._paymentMethods.validate(props.paymentMethods);
@@ -243,8 +243,10 @@ export class CustomerEntity {
   public toJSON() {
     return {
       id: this.id,
-      name: this.name,
       address: this.address,
+      alternateFiscalCode: this.alternateFiscalCode,
+      alternateIndustryCode: this.alternateIndustryCode,
+      alternateName: this.alternateName,
       blocked: this.blocked,
       cellPhone: this.cellPhone,
       channel: this.channel,
@@ -254,15 +256,13 @@ export class CustomerEntity {
       distrChan: this.distrChan,
       division: this.division,
       fiscalCode: this.fiscalCode,
-      alternate_fiscalCode: this.alternateFiscalCode,
       frequency: this.frequency,
       frequencyDays: this.frequencyDays,
       idPortfolio: this.idPortfolio,
       immediateDelivery: this.immediateDelivery,
       industryCode: this.industryCode,
-      alternate_industryCode: this.alternateIndustryCode,
       isEnrollment: this.isEnrollment,
-      alternate_name: this.alternateName,
+      name: this.name,
       office: this.office,
       paymentCondition: this.paymentCondition,
       paymentMethods: this.paymentMethods,

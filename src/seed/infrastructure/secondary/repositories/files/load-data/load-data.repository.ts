@@ -22,9 +22,9 @@ export class LoadDataSeedFileRepository implements LoadDataSeedRepositoryPort {
       for (const data of dataFile) {
         const entity = CustomerEntity.init({
           address: data.address,
-          alternate_fiscalCode: +data.fiscalCode2,
-          alternate_industryCode: data.industryCode1,
-          alternate_name: data.name2,
+          alternateFiscalCode: +data.fiscalCode2,
+          alternateIndustryCode: data.industryCode1,
+          alternateName: data.name2,
           blocked: data.blocked == 'SI' ? true : false,
           cellPhone: data.cellPhone,
           channel: data.channel,

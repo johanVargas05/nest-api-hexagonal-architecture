@@ -8,17 +8,17 @@ import {
   RUN_SEED_SERVICE,
   SEED_RUN_CHECK_SERVICE,
 } from '@seed-domain/constants/injections.constant';
-import { RunSeedMongoRepository } from '../../secondary/repositories/mongoose/run-seed/run-seed.repository';
-import { SeedRunCheckMongoRepository } from '../../secondary/repositories/mongoose/seed-check/seed-check.repository';
-import { LoadDataSeedFileRepository } from '../../secondary/repositories/files/load-data/load-data.repository';
+import { RunSeedMongoRepository } from '@seed-infrastructure/secondary/repositories/mongoose/run-seed/run-seed.repository';
+import { RunSeedController } from '@seed-infrastructure/primary/controllers/run-seed.controller';
+import { SeedRunCheckMongoRepository } from '@seed-infrastructure/secondary/repositories/mongoose/seed-check/seed-check.repository';
+import { LoadDataSeedFileRepository } from '@seed-infrastructure/secondary/repositories/files/load-data/load-data.repository';
 import { RunSeedUseCase } from 'src/seed/application/run-seed.use-case';
 import { RunSeedService } from '@seed-domain/services/run-seed.service';
 import { SeedCheckService } from '@seed-domain/services/seed-check.service';
-import { RunSeedController } from '../controllers/run-seed.controller';
 import {
   CustomerModel,
   CustomerSchema,
-} from 'src/customer/infrastructure/secondary/repositories/mongoose/models/customer.model';
+} from '@customer-infrastructure/secondary/repositories/mongoose/models/customer.model';
 
 @Module({
   imports: [
