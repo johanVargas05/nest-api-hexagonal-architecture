@@ -3,9 +3,9 @@ import { InjectModel } from '@nestjs/mongoose';
 
 import { Model } from 'mongoose';
 
-import { CustomerEntity } from 'src/customer/domain/entities/customer.entity';
-import { CustomerModel } from 'src/customer/infrastructure/secondary/repositories/mongoose/models/customer.model';
-import { RunSeedRepositoryPort } from 'src/seed/domain/ports/mutations-repositories.port';
+import { CustomerEntity } from '@customer-domain/entities/customer.entity';
+import { CustomerModel } from '@customer-infrastructure/secondary/repositories/mongoose/models/customer.model';
+import { RunSeedRepositoryPort } from '@seed-domain/ports/mutations-repositories.port';
 
 export class RunSeedMongoRepository implements RunSeedRepositoryPort {
   constructor(

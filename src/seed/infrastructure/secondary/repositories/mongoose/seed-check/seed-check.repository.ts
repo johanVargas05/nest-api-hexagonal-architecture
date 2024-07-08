@@ -3,8 +3,8 @@ import { InjectModel } from '@nestjs/mongoose';
 
 import { Model } from 'mongoose';
 
-import { CustomerModel } from 'src/customer/infrastructure/secondary/repositories/mongoose/models/customer.model';
-import { SeedRunCheckRepositoryPort } from 'src/seed/domain/ports/queries-repositories.port';
+import { CustomerModel } from '@customer-infrastructure/secondary/repositories/mongoose/models/customer.model';
+import { SeedRunCheckRepositoryPort } from '@seed-domain/ports/queries-repositories.port';
 
 export class SeedRunCheckMongoRepository implements SeedRunCheckRepositoryPort {
   constructor(

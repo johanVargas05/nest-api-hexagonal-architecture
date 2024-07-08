@@ -4,3 +4,4 @@ export * from './generals-validations.util';
 export * from './number-validations';
 export * from './string-validations';
 export * from './date-validations';
+export * from './object-validations';

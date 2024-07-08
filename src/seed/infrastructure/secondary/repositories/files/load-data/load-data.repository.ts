@@ -3,8 +3,8 @@ import { join } from 'path';
 
 import { HttpException } from '@nestjs/common';
 
-import { CustomerEntity } from 'src/customer/domain/entities/customer.entity';
-import { LoadDataSeedRepositoryPort } from 'src/seed/domain/ports/queries-repositories.port';
+import { CustomerEntity } from '@customer-domain/entities/customer.entity';
+import { LoadDataSeedRepositoryPort } from '@seed-domain/ports/queries-repositories.port';
 
 export class LoadDataSeedFileRepository implements LoadDataSeedRepositoryPort {
   constructor() {}

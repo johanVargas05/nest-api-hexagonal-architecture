@@ -7,13 +7,13 @@ import {
   RUN_SEED_USE_CASE,
   RUN_SEED_SERVICE,
   SEED_RUN_CHECK_SERVICE,
-} from 'src/seed/domain/constants/injections.constant';
+} from '@seed-domain/constants/injections.constant';
 import { RunSeedMongoRepository } from '../../secondary/repositories/mongoose/run-seed/run-seed.repository';
 import { SeedRunCheckMongoRepository } from '../../secondary/repositories/mongoose/seed-check/seed-check.repository';
 import { LoadDataSeedFileRepository } from '../../secondary/repositories/files/load-data/load-data.repository';
 import { RunSeedUseCase } from 'src/seed/application/run-seed.use-case';
-import { RunSeedService } from 'src/seed/domain/services/run-seed.service';
-import { SeedCheckService } from 'src/seed/domain/services/seed-check.service';
+import { RunSeedService } from '@seed-domain/services/run-seed.service';
+import { SeedCheckService } from '@seed-domain/services/seed-check.service';
 import { RunSeedController } from '../controllers/run-seed.controller';
 import {
   CustomerModel,
