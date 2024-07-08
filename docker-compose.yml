@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mongo-nest:
+    container_name: mongo-db-nest
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+  redis-nest:
+    container_name: redis-db-nest
+    image: redis:latest
+    ports:
+      - '6379:6379'
+  myapp:
+    container_name: api-rest-nest
+    image: api-rest-of-client-info-with-nest:latest
+    environment:
+      MONGO_DB_HOST: mongo-nest
+      MONGO_DB_PORT: 27017
+      MONGO_DB_DATABASE: clients-data-general
+      REDIS_HOST: redis-nest
+      PORT: 3001
+    ports:
+      - '3001:3001'
+    depends_on:
+      - mongo-nest
+      - redis-nest
