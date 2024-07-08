@@ -43,6 +43,13 @@ The infrastructure layer is divided into two parts with specific responsibilitie
 - **Method:** GET
 - **Route:** `/seed`
 
+### Get customer by ID
+
+- **Description:** We search for a customer's general information by customer id.
+- **Method:** GET
+- **Route:** `/v1/customer/:customerId`
+- **Param** `:customerId`
+
 ## Technologies Used
 
 - **Nest JS:** The programming language used to develop the API.
