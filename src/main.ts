@@ -6,7 +6,10 @@ import { RequestMethod } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('v1', {
-    exclude: [{ path: 'health', method: RequestMethod.GET }],
+    exclude: [
+      { path: 'health', method: RequestMethod.GET },
+      { path: 'seed', method: RequestMethod.GET },
+    ],
   });
   app.enableCors({
     origin: '*',
