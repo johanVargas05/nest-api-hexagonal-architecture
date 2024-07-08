@@ -16,6 +16,15 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@seed-domain/*": ["src/seed/domain/*"],
+      "@seed-infrastructure/*": ["src/seed/infrastructure/*"],
+      "@seed-application/*": ["src/seed/application/*"],
+      "@customer-domain/*": ["src/customer/domain/*"],
+      "@customer-infrastructure/*": ["src/customer/infrastructure/*"],
+      "@customer-application/*": ["src/customer/application/*"],
+      "@shared/*": ["src/shared/*"]
+    }
   }
 }

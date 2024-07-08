@@ -1,6 +1,7 @@
 import { Controller, Get, Inject } from '@nestjs/common';
-import { RUN_SEED_USE_CASE } from 'src/seed/domain/constants/injections.constant';
-import { RunSeedUseCasePort } from 'src/seed/domain/ports/mutations-use-cases.port';
+
+import { RUN_SEED_USE_CASE } from '@seed-domain/constants/injections.constant';
+import { RunSeedUseCasePort } from '@seed-domain/ports/mutations-use-cases.port';
 
 @Controller()
 export class RunSeedController {

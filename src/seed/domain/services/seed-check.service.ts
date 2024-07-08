@@ -1,7 +1,8 @@
 import { HttpException, HttpStatus, Inject } from '@nestjs/common';
-import { SeedRunCheckServicePort } from '../ports/queries-services.port';
-import { SeedRunCheckRepositoryPort } from '../ports/queries-repositories.port';
-import { SEED_RUN_CHECK_REPOSITORY } from '../constants/injections.constant';
+
+import { SeedRunCheckServicePort } from '@seed-domain/ports/queries-services.port';
+import { SeedRunCheckRepositoryPort } from '@seed-domain/ports/queries-repositories.port';
+import { SEED_RUN_CHECK_REPOSITORY } from '@seed-domain/constants/injections.constant';
 
 export class SeedCheckService implements SeedRunCheckServicePort {
   constructor(

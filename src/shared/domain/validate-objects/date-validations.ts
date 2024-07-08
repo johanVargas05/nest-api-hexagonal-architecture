@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 
 import { validateNotNull } from './generals-validations.util';
-import { ValidObject } from '../ports/validate-objects.interface';
+import { ValidObject } from '@shared/domain/ports/validate-objects.interface';
 
 export class DateValidateObject implements ValidObject<Date> {
   private _value: Date;

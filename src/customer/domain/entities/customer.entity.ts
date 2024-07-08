@@ -3,8 +3,8 @@ import {
   BooleanValidateObject,
   NumberValidateObject,
   StringValidateObject,
-} from 'src/shared/domain/validate-objects';
-import { ObjectValidate } from 'src/shared/domain/validate-objects/object-validations';
+  ObjectValidate,
+} from '@shared/domain/validate-objects';
 
 export interface CustomerProps {
   id: string;
@@ -226,10 +226,6 @@ export class CustomerEntity {
     this._alternate_name.validate(props.alternate_name);
     this._office.validate(props.office);
     this._paymentCondition.validate(props.paymentCondition);
-    console.log(
-      '🚀 ~ CustomerEntity ~ constructor ~ props.paymentMethods:',
-      props.paymentMethods,
-    );
     this._paymentMethods.validate(props.paymentMethods);
     this._priceGroup.validate(props.priceGroup);
     this._priceList.validate(props.priceList);

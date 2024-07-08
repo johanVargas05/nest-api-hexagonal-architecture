@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 
-import { ValidObject } from '../ports/validate-objects.interface';
+import { ValidObject } from '@shared/domain/ports/validate-objects.interface';
 import {
   validateMaxLength,
   validateMinLength,

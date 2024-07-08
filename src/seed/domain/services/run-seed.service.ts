@@ -1,11 +1,12 @@
 import { HttpException, HttpStatus, Inject } from '@nestjs/common';
-import { RunSeedRepositoryPort } from '../ports/mutations-repositories.port';
-import { RunSeedServicePort } from '../ports/mutations-services.port';
-import { LoadDataSeedRepositoryPort } from '../ports/queries-repositories.port';
+
 import {
   LOAD_DATA_SEED_REPOSITORY,
   RUN_SEED_REPOSITORY,
-} from '../constants/injections.constant';
+} from '@seed-domain/constants/injections.constant';
+import { RunSeedRepositoryPort } from '@seed-domain/ports/mutations-repositories.port';
+import { RunSeedServicePort } from '@seed-domain/ports/mutations-services.port';
+import { LoadDataSeedRepositoryPort } from '@seed-domain/ports/queries-repositories.port';
 
 export class RunSeedService implements RunSeedServicePort {
   constructor(
