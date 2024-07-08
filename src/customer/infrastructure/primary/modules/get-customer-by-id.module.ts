@@ -1,3 +1,5 @@
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { CacheInterceptor, CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
@@ -14,9 +16,11 @@ import {
   GET_CUSTOMER_BY_ID_USE_CASE,
 } from '@customer-domain/constants/injections.constant';
 import { GetCustomerByIdService } from '@customer-domain/services/get-customer-by-id.service';
+import { RedisOptions } from '@config/config-cache';
 
 @Module({
   imports: [
+    CacheModule.registerAsync(RedisOptions),
     MongooseModule.forFeature([
       { name: CustomerModel.name, schema: CustomerSchema },
     ]),
@@ -27,6 +31,10 @@ import { GetCustomerByIdService } from '@customer-domain/services/get-customer-b
     {
       provide: GET_CUSTOMER_BY_ID_REPOSITORY,
       useClass: GetCustomerByIdMongoRepository,
+    },
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
     },
     /* Application */
     {
