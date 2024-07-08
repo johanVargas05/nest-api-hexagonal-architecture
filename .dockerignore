@@ -1,0 +1,15 @@
+.editorconfig
+.eslintrc.json
+.git
+.gitignore
+.prettierignore
+.prettierrc
+.vscode
+karma.conf.js
+node_modules
+README.md
+package-lock.json
+.github
+dist
+.env
+.env.example

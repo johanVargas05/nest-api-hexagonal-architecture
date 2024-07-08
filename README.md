@@ -70,6 +70,22 @@ To run the project, use the following command:
 npm run start
 ```
 
+### Build the image of our app
+
+This command is used to create the image for our app based on the `Dockerfile`, use:
+
+```sh
+docker build -t api-rest-of-client-info-with-nest .
+```
+
+### Starting my application with all its dependencies
+
+To start the application with all its dependencies, use:
+
+```sh
+docker-compose -p api_nest up -d
+```
+
 ## Glossary
 
 **Adapter:**
