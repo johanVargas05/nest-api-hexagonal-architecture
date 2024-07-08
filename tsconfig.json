@@ -24,7 +24,8 @@
       "@customer-domain/*": ["src/customer/domain/*"],
       "@customer-infrastructure/*": ["src/customer/infrastructure/*"],
       "@customer-application/*": ["src/customer/application/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@config/*": ["src/config/*"]
     }
   }
 }

@@ -24,6 +24,7 @@ ENV MONGO_DB_HOST=localhost \
     MONGO_DB_PORT=27017 \
     MONGO_DB_DATABASE=clients-data-general \
     REDIS_HOST=localhost \
+    REDIS_PORT=6379 \
     PORT=3001
 
 EXPOSE 3001
